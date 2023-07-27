@@ -1,0 +1,165 @@
+/* Variables */
+:root {
+  --primary: rgb(83, 79, 79);
+  --niceGray: rgb(129, 125, 125);
+}
+
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+background-image: url("/images/golden_film.jpeg");
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Global Classes */
+.row, .column {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+/* Custom Styles */
+header {
+  padding: 9px 5%;
+  background: var(--primary);
+}
+
+header h2, header nav i {
+  color: #fff;
+}
+
+header nav i {
+  font-size: 1.5rem;
+  padding: 0 2px;
+}
+
+/* Content Styles */
+h1.main-header {
+  text-align: center;
+  margin: 15px 0;
+  color: var(--primary);
+}
+
+.detailed-display {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 80%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.detailed-display h2 {
+  color: orange;
+}
+
+.detailed-display >*:not(h2) {
+  color: #fff;
+  margin-top: 10px;
+}
+
+.detailed-display p {
+  line-height: 1.4;
+}
+
+.detailed-display a {
+  color: orange;
+  border-bottom: 1px dashed orange;
+  display: inline-block;
+}
+
+.search {
+  width: 350px;
+  margin: 0 auto 30px;
+  padding: 7px 15px;
+  border-radius: 15px;
+  border: 1px solid var(--primary);
+  outline: none;
+  color: var(--niceGray);
+}
+
+.search::placeholder, .search-p {
+  text-align: center;
+  color: var(--primary);
+}
+
+.search-p {
+  text-align: center;
+  color: var(--niceGray);
+  padding-bottom: 20px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 0 5%;
+}
+
+main .movie-item {
+  border: 3px solid var(--primary);
+  border-radius: 5px;
+  padding: 15px 10px;
+  /* background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url(https://api.lorem.space/image/movie?w=150&h=220); */
+  padding: 10px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main .movie-item > *:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+main .movie-item h3{
+  color: var(--primary);
+  font-size: 0.95rem;
+}
+
+main .movie-item p {
+  color: #777;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+main .movie-item a {
+  color: orange;
+  border-bottom: 1px dashed;
+  font-size: .8rem;
+}
+
+main .movie-item h3, main .movie-item p {
+  color: white;
+}
